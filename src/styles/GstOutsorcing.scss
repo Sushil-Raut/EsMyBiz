@@ -1,0 +1,140 @@
+.MainContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 20px;
+
+    .FirstContainer, .SecondContainer, .ThirdContainer {
+        width: 95%;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    // First Section (Service Introduction)
+    .FirstContainer {
+        text-align: center;
+
+        h2 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            position: relative;
+            padding-left: 40px; // Space for the check icon
+            font-size: 16px;
+            color: #555;
+            display: flex;
+            align-items: center;
+        }
+
+        p::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 25px;
+            height: 25px;
+            background-color: green;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .Mybtn {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+
+            button {
+                background-color: #4f86f7;
+                color: white;
+                border: none;
+                padding: 12px 25px;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 5px;
+                font-weight: bold;
+                transition: background 0.3s ease;
+
+                &:hover {
+                    background-color: #3a6fd8;
+                }
+            }
+        }
+    }
+
+    // Second Section (Why Choose Us)
+    .SecondContainer {
+        text-align: left;
+
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+    }
+
+    // Third Section (Trusted Partner)
+    .ThirdContainer {
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .MycontactBtn {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+
+            button {
+                background-color: #28a745;
+                color: white;
+                border: none;
+                padding: 12px 25px;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 5px;
+                font-weight: bold;
+                transition: background 0.3s ease;
+
+                &:hover {
+                    background-color: #218838;
+                }
+            }
+        }
+    }
+}

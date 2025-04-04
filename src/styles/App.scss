@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+@import "Home";
+@import "GstOutsorcing";
+@import "Header";
+@import "HireVirtualAccontant";
+@import "Payrolloutsorcing";
+@import "Contact";
+@import "Footer";
+@import "mediaquery";
+@import "ForthContainer";
+* {  
+    padding: 0;  
+    margin: 0;  
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
+  } 
+  
+  body {
+    background-color: #fff;
+    overflow-x: hidden;
+   
+  }

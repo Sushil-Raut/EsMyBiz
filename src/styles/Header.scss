@@ -1,0 +1,122 @@
+.Header {
+    width: 100%;
+    padding: 1rem;
+    background-color: #5bb1bd;
+    position: sticky; // Fixed ki jagah sticky
+    top: 0;
+    left: 0;
+    z-index: 10; // Kam z-index rakhna takki other content ke upar na aaye
+    box-shadow: 1px 2px 12px rgba(214, 15, 15, 0.1);
+
+}
+
+.UpperHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    height: 5rem;
+}
+
+.UpperHeader span {
+    color: #ffe;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.UpperNav {
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    /* Yeh navigation ko center mein rakhne aur evenly spread karne ke liye */
+}
+
+.UpperNav a {
+    text-decoration: none;
+    // color: rgb(5, 4, 16);
+    // color: rgba(242, 238, 0, 0.88);
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.UpperNav a:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+    /* Underline ka color set karna ho to */
+    text-decoration-thickness: 2px;
+    /* Underline ki motai */
+    text-underline-offset: 4px;
+    /* Underline ko 2px niche shift karega */
+}
+
+.UpperNav a:hover,
+.UpperNav a:focus,
+.UpperNav a:active {
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+.LoginSignup {
+    display: flex;
+    align-items: center;
+    // gap: 15px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 5px;
+    color: white;
+    font-size: 19px;
+    background-color: #030303;
+
+
+}
+
+
+    .Burger {
+        display: none; // Hide by default
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        cursor: pointer;
+        color: white;
+        font-size: 2rem;
+      
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+      
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+      }
+      .MiniNavContainer {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s;
+        z-index: 1000;
+        pointer-events: none; // Prevent interactions when hidden
+      
+        &.active {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+          pointer-events: auto;
+        }
+      }
+      

@@ -1,0 +1,155 @@
+// Importing all individual SCSS files
+// @import "Home";
+// @import "GstOutsorcing";
+// @import "Header";
+// @import "HireVirtualAccontant";
+// @import "Payrolloutsorcing";
+// @import "Contact";
+// @import "Footer";
+
+// Common styles to ensure better responsiveness
+// ✅ Laptop (max-width: 1440px)
+@media screen and (max-width: 1440px) {
+    .MainContainer {
+      padding: 20px;
+    }
+  
+    .FirstContainer,
+    .SecondContainer,
+    .ThirdContainer {
+      width: 90%;
+      margin: auto;
+    }
+  
+    .Header {
+      padding: 15px;
+    }
+  }
+  
+  // ✅ iPad / Tablet (max-width: 1024px)
+  @media screen and (max-width: 1024px) {
+    .MainContainer {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .FirstContainer,
+    .SecondContainer,
+    .ThirdContainer {
+      width: 95%;
+    }
+  
+    .Header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+  
+  // ✅ Mobile (max-width: 768px)
+  @media screen and (max-width: 768px) {
+    .MainContainer {
+      padding: 10px;
+    }
+  
+    .FirstContainer,
+    .SecondContainer,
+    .ThirdContainer {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    h2 {
+      font-size: 22px;
+      text-align: center;
+    }
+  
+    h3 {
+      font-size: 18px;
+      text-align: center;
+    }
+  
+    p {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+  
+    .Header {
+      padding: 12px;
+      text-align: center;
+    }
+  
+    .button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .ContactBtn,
+    .MyBtn {
+      text-align: center;
+    }
+  
+    button {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+    }
+  }
+  
+  // ✅ Extra Small Devices (max-width: 480px)
+  @media screen and (max-width: 480px) {
+    .MainContainer {
+      padding: 8px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    h3 {
+      font-size: 16px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 12px;
+    }
+  }
+  
+
+  //  
+      // Media query: Show Burger menu only when screen width is <= 786px
+      @media screen and (max-width: 786px) {
+        .Burger {
+          display: flex; // Show burger menu
+        }
+      
+        nav {
+          > a,
+          > button {
+            display: none; // Hide nav items
+          }
+        }
+      }
+      
+      // Media query: Ensure Burger menu remains hidden above 786px
+      @media screen and (min-width: 787px) {
+        .Burger {
+          display: none !important;
+        }
+      }
+      

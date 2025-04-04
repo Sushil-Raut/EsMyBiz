@@ -1,0 +1,130 @@
+.MainContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column; // Stacks containers vertically
+  align-items: center;
+  gap: 30px; // Space between sections
+  padding: 40px 20px; // Adds padding for responsiveness
+
+  // Styling for all containers (First, Second, Third, and Fourth)
+  .FirstContainer, .SecondContainer, .ThirdContainer, .ForthContainer {
+      width: 95%; // Responsive width
+      background-color: white; // White background
+      padding: 30px;
+      border-radius: 10px; // Rounded corners
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); // Light shadow for depth
+  }
+
+  // 🔹 First Container (Main Section)
+  .FirstContainer {
+      text-align: center; // Centers heading and text
+
+      h2 {
+          font-size: 28px;
+          font-weight: bold;
+          margin-bottom: 15px;
+      }
+
+      h3 {
+          font-size: 18px;
+          color: #333;
+          margin-bottom: 20px;
+      }
+
+      p {
+          font-size: 16px;
+          color: #555;
+          text-align: left; // Aligns text left
+          margin: 8px 0;
+      }
+
+      // 🔹 Button Styling Inside FirstContainer
+      .FirstContainerBtn {
+          display: flex;
+          justify-content: center; // Centers button
+          margin-top: 20px;
+
+          button {
+              background-color: #4f86f7; // Blue color
+              color: white;
+              border: none;
+              padding: 12px 25px;
+              font-size: 16px;
+              cursor: pointer;
+              border-radius: 5px;
+              font-weight: bold;
+              transition: background 0.3s ease;
+
+              &:hover {
+                  background-color: #3a6fd8; // Darker blue on hover
+              }
+          }
+      }
+  }
+
+  // 🔹 Adding Checkmark Circle Before Paragraphs
+  .FirstContainer p {
+      position: relative;
+      padding-left: 40px; // Space for the icon
+      font-size: 16px;
+      color: #555;
+      display: flex;
+      align-items: center;
+  }
+
+  .FirstContainer p::before {
+      content: "✔"; // Unicode checkmark symbol
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 25px;
+      height: 25px;
+      background-color: green; // Green circle
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%; // Makes it a perfect circle
+  }
+
+  // 🔹 Second Container (Why Payroll Outsourcing)
+  .SecondContainer {
+      text-align: left; // Aligns text left
+
+      h2 {
+          text-align: center;
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 15px;
+      }
+
+      p {
+          font-size: 16px;
+          color: #555;
+          line-height: 1.5;
+          margin-bottom: 10px;
+      }
+  }
+
+  // 🔹 Third Container (Why Choose Our Service?)
+  .ThirdContainer {
+      h2 {
+          text-align: center;
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 15px;
+      }
+
+      p {
+          font-size: 16px;
+          color: #555;
+          margin-bottom: 10px;
+          font-weight: 500;
+      }
+  }
+
+  
+}
