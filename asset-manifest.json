@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/EsMyBiz/static/css/main.e0ba9f6e.css",
+    "main.js": "/EsMyBiz/static/js/main.86bac3fa.js",
+    "index.html": "/EsMyBiz/index.html",
+    "main.e0ba9f6e.css.map": "/EsMyBiz/static/css/main.e0ba9f6e.css.map",
+    "main.86bac3fa.js.map": "/EsMyBiz/static/js/main.86bac3fa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e0ba9f6e.css",
+    "static/js/main.86bac3fa.js"
+  ]
+}
