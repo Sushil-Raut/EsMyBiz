@@ -1,7 +1,7 @@
 {
+  "homepage": "https://Sushil-Raut.github.io/EsMyBiz",
   "name": "esmybiz",
   "version": "0.1.0",
-  "homepage": "https://Sushil-Raut.github.io/EsMyBiz",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
