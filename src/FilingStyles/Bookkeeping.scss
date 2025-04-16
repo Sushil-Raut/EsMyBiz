@@ -1,0 +1,244 @@
+// ====================
+// Variables
+// ====================
+$primary-color: #4b0082;
+$secondary-color: #6a0dad;
+$gradient: linear-gradient(to right, #6a0dad, #00bcd4);
+$text-light: #ffffff;
+$light-bg: #f9f9f9;
+$dark-bg: #ffffff;
+$shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+$transition: all 0.3s ease;
+$heading-gradient: linear-gradient(to right, #1e90ff, #00bfa6);
+
+
+// ====================
+// Global Fix for All h1
+// ====================
+h1 {
+  text-align: left !important;
+}
+
+// ====================
+// Common container
+// ====================
+.MainContainer {
+  width: 100%; 
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 2rem 1rem;
+  // margin-top: 40px;
+  &:hover {
+    // transform: scale(1.05);
+    transition: all;
+    box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
+  }
+}
+
+// ====================
+// Bookkeeping Heading Section
+// ====================
+.BookkeepingHeading {
+  
+  width: 100%;
+  background-color: $dark-bg;
+  margin-bottom: 30px; 
+  h1{
+    // font-size: 2rem;
+      
+      margin-bottom: 1rem;
+      color: #333;
+      // color: $primary-color;
+      text-shadow: 1px 1px 0px #ddd;
+  
+      text-align: left;
+      align-self: flex-start; // 👈 Important
+      width: 100%; // 👈 Ensures full width for alignment
+  }
+  h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 10px;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    color: $primary-color;
+    // color: #333;
+    text-shadow: 1px 1px 0px #ddd;
+
+    text-align: left;
+    align-self: flex-start; // 👈 Important
+    
+  }
+
+  p {
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  button {
+    display: block;
+    margin: 2rem auto;
+    padding: 0.75rem 2rem;
+    background-color: $primary-color;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #5d18a6;
+    }
+  }
+}
+
+.BookHeader,
+.BookKeeping,
+.BookTools,
+.BookEsMyBiz {
+  @extend .MainContainer;
+  margin-bottom: 30px;
+  text-align: left;
+  width: 100%;
+
+}
+
+// ====================
+// BookKeeping Section
+// ====================
+.BookKeeping {
+  width: 100%;
+  align-self: flex-start;
+  
+  h1 {
+    font-size: 2rem;
+    color: #333;
+    // color: $primary-color;
+    margin-bottom: 2rem;    
+    text-align: left; // ab ye kaam karega
+    // align-items & display hata do
+  }
+
+  .BookKeepingCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .BookKeeping1 {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: $shadow;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      color: $primary-color;
+      // color: #333;
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+      text-align: left;
+    }
+
+    p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.5;
+      text-align: left;
+    }
+  }
+}
+
+// ====================
+// Tools Section
+// ====================
+.BookTools {
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: $shadow;
+  transition: transform 0.3s ease;
+
+
+  h2 {
+    text-align: left;
+    font-size: 1.4rem;
+    // color: #333;
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+  }
+
+ 
+  span {
+    text-align: left;
+    display: inline-block;
+    margin: 0.4rem 0.7rem;
+    background-color: $light-bg;
+    color: $primary-color;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+}
+
+// ====================
+// Why EsmyBiz Section
+// ====================
+.BookEsMyBiz {
+  h1 {
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    // color: $primary-color;
+    color: #333;
+    text-align: left;
+  }
+
+  h2{
+  //  color: #333;;
+  color: $primary-color;
+
+  }
+  .BookKeepingCards {
+    text-align: left;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .BookKeeping1 {
+    
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: $shadow;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      text-align: left;
+      color: $primary-color;
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    p {
+      text-align: left;
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+}

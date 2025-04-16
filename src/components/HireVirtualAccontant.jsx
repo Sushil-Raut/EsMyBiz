@@ -1,36 +1,57 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import '../styles/HireVirtualAccontant.scss';
+
+import "../styles/HireVirtualAccontant.scss";
 
 function HireVirtualAccontant() {
+  const services = [
+   
+    "Cash, Revenue, and Expenses Forecasting",
+    "Monthly Balance Sheet and Profit & Loss Reporting",
+   
+    "Bank & Credit Card Reconciliation",
+    "GST Calculation & Return Filing",
+    "Data Entry into Accounting Software",
+    "Preparation & Finalisation of Books of Accounts",
+    
+    "Payroll Calculation & TDS/PF/ESI Payments",
+    "Highly Experienced Chartered Accountants Team",
+   
+    "Accounts Payable & Receivable Management",
+
+    "TDS Calculation & Return Filing",
+    
+  ];
+
   return (
-    <div className="MainContainer">
-      <div className="FirstContainer">
-        <h2>Hire Virtual Accountant – Expert Accounting Made Easy</h2>
-        <h3>
+    <div className="VirtualContainer ">
+      <div className="FirstContainer1 FirstHead">
+        <h1>Hire Virtual Accountant – Expert Accounting Made Easy</h1>
+        <h4>
           Get access to a team of highly experienced Chartered Accountants to
           handle your day-to-day accounts, compliance, and financial reports —
           all without the cost of a full-time hire.
-        </h3>
-        <p>Highly Experienced Chartered Accountants Team</p>
-        <p>Bank & Credit Card Reconciliation</p>
-        <p>Accounts Payable & Receivable Management</p>
-        <p> Payroll Calculation & TDS/PF/ESI Payments</p>
-        <p> TDS Calculation & Return Filing</p>
-        <p>GST Calculation & Return Filing</p>
-        <p>Cash, Revenue, and Expenses Forecasting</p>
-        <p>Monthly Balance Sheet and Profit & Loss Reporting</p>
-        <p> Data Entry into Accounting Software</p>
-        <p>Preparation & Finalisation of Books of Accounts</p>
-        <div className="ContactBtn">
+        </h4>
+
+        <div className="ServiceCardsWrapper cards">
+          {services.map((text, index) => (
+            <div className="Card" key={index}>
+              <div className="content">
+                <p>{text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="ContactBtn" style={{ marginTop: "20px" }}>
           <Link to="/contact">
-            <button>📞Shedule a Free Consultation</button>
+            <button>📞 Schedule a Free Consultation</button>
           </Link>
         </div>
       </div>
 
-      <div className="SecondContainer">
-        <h2>Virtual Accountant Services for Efficient Financial Management</h2>
+      <div className="SecondContainer2">
+        <h1>Virtual Accountant Services for Efficient Financial Management</h1>
         <p>
           In the ever-evolving landscape of accounting, technological
           advancements have revolutionized the sector, offering benefits such as
@@ -80,21 +101,21 @@ function HireVirtualAccontant() {
           cost-effectiveness.
         </p>
       </div>
-      <div className="ThirdContainer">
-        <h2>Why Choose Our Virtual Accountant Services?</h2>
+      <div className="ThirdContainer3">
+        <h1>Why Choose Our Virtual Accountant Services?</h1>
 
         <p>
-          <b>Remote Expertise:</b> Our virtual accountants bring their expertise to
-          your doorstep—virtually. With the power of digital connectivity, you
-          can access top-notch accounting professionals without the need for an
-          on-site presence.
+          <b>Remote Expertise:</b> Our virtual accountants bring their expertise
+          to your doorstep—virtually. With the power of digital connectivity,
+          you can access top-notch accounting professionals without the need for
+          an on-site presence.
         </p>
 
         <p>
-          <b>Efficiency Through Technology:</b> We leverage cutting-edge cloud-based
-          accounting software to streamline your financial processes. This
-          ensures real-time collaboration, secure data sharing, and enhanced
-          efficiency in managing your books, payroll, and taxation.
+          <b>Efficiency Through Technology:</b> We leverage cutting-edge
+          cloud-based accounting software to streamline your financial
+          processes. This ensures real-time collaboration, secure data sharing,
+          and enhanced efficiency in managing your books, payroll, and taxation.
         </p>
 
         <p>
@@ -106,9 +127,9 @@ function HireVirtualAccontant() {
         </p>
 
         <p>
-         <b> Scalable Support:</b> Whether you need ongoing bookkeeping, periodic
-          financial statements, or specialized tax advisory services, our
-          virtual accountant services are scalable to adapt to your business
+          <b> Scalable Support:</b> Whether you need ongoing bookkeeping,
+          periodic financial statements, or specialized tax advisory services,
+          our virtual accountant services are scalable to adapt to your business
           requirements. Flexibility is at the core of our offerings.
         </p>
       </div>

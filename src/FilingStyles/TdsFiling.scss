@@ -1,0 +1,256 @@
+
+// Variables
+// ====================
+$primary-color: #4b0082;
+$secondary-color: #6a0dad;
+$gradient: linear-gradient(to right, #6a0dad, #00bcd4);
+$text-light: #ffffff;
+$light-bg: #f9f9f9;
+$dark-bg: #ffffff;
+$shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+$transition: all 0.3s ease;
+$heading-gradient: linear-gradient(to right, #1e90ff, #00bfa6);
+.TdsFlingContent {
+  width: 100%;
+  max-width: 1373px;
+  margin: 0 auto; // Center the container horizontally
+  padding: 0 20px; // Consistent left and right padding
+  background-color: $dark-bg;
+  font-family: 'Segoe UI', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  h1, h2 {
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  // ==========================
+  // First Section
+  // ==========================
+  .FirstTdsSection {
+    margin-top: 20px;
+    background-color: $dark-bg;
+    // border-radius: 15px;
+    // box-shadow: $shadow;
+    padding: 20px;
+    margin-bottom: 3rem;
+    transition: $transition;
+    &:hover {
+      // transform: scale(1.05);
+      transition: all;
+      box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      color: #333;
+      font-size: 2rem;;
+      align-items: start;
+
+    }
+
+    h2 {
+      // margin-bottom: 0.8rem;
+      color: $primary-color;
+      text-align: left;
+    }
+
+    p {      
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: left;
+      color: #444;
+    }
+  }
+
+  // ==========================
+  // Shared Section Styles
+  // ==========================
+  .SecondTdsSection,
+  .ThirdTdsSection,
+  .FifthTdsSection,
+  .SixTdsSection {
+    width: 100%;    
+    background-color: $dark-bg;
+    padding: 20px;
+    // border-radius: 10px;
+    // box-shadow: $shadow;
+    &:hover {
+      // transform: scale(1.05);
+      transition: all;
+      box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
+    }
+
+    h1 {
+      text-align: left;
+      color: $primary-color;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      text-align: left;
+      font-size: 18px;
+      color: #444;
+      margin: 0 0 30px 10px;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 0.9rem 2rem;
+      font-size: 1.1rem;
+      background-image: $gradient;
+      color: $text-light;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      display: block;
+      margin-inline: auto;
+      box-shadow: 0 4px 15px rgba(106, 13, 173, 0.3);
+      transition: $transition;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
+      }
+    }
+  }
+
+  // ==========================
+  // Fourth Section
+  // ==========================
+  .ForthTdsSection {
+    width: 100%;
+    background-color: $dark-bg;
+    padding: 30px;
+    border-radius: 10px;
+    // box-shadow: $shadow;
+    // margin-bottom: 30px;
+    &:hover {
+      // transform: scale(1.05);
+      transition: all;
+      box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
+    }
+
+    h1 {
+      color: #2b2b40;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 20px;
+      color: $primary-color;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #555;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  }
+
+
+
+    button {
+      background-image: $gradient;
+      color: $text-light;
+      padding: 0.9rem 2rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(106, 13, 173, 0.3);
+      transition: $transition;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
+      }
+    }
+  
+
+  // ==========================
+  // Responsive Design
+  // ==========================
+  @media screen and (max-width: 1024px) {
+    .FifthTdsSection,
+    .SixTdsSection {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .FifthTdsSection,
+    .SixTdsSection {
+      grid-template-columns: 1fr;
+    }
+
+    .SecondTdsSection button {
+      font-size: 14px;
+    }
+
+    .FirstTdsSection,
+    .ForthTdsSection,
+    .ThirdTdsSection {
+      padding: 20px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 20px !important;
+    }
+
+    h2 {
+      font-size: 16px !important;
+    }
+
+    p {
+      font-size: 14px !important;
+    }
+
+    button {
+      font-size: 15px;
+      padding: 12px 18px;
+    }
+  }
+}
+
+// ==========================
+// Card Layout
+// ==========================
+.CardWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 20px 0;
+}
+
+.Card {
+  background-color: $dark-bg;
+  border: 1px solid #e2f1f2;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: $transition;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  h2 {
+    font-size: 20px;
+    color: $primary-color;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+  }
+}

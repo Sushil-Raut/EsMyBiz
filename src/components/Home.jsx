@@ -1,70 +1,150 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { FaEnvelope } from "react-icons/fa"; // Email icon
-import { FaWhatsapp } from "react-icons/fa"; // WhatsApp icon
+// import { Link } from "react-router-dom";
+import { Rocket, Settings, Mic } from "lucide-react"; // Optional: Replace with custom icons/images
 
-function Home() {
+import "../styles/Home.scss";
+// import AwardedSection from "../AnimationJSX/AwardedSection";
+
+const Home = () => {
   return (
-    <div className="HomeContainer">
-      <div className="FirstContainer">
-        <h2>Simplify Your Payroll with Confidence</h2>
-        <p>
-          We take care of your payroll processing, compliance, and payslips — so
-          you can focus on growing your business.
-        </p>
+    <>
+      <div className="home-container"> {/* Fixed this line */}
+        <div className="MainContainer">
+          {/* === Hero Section === */}
+          <section className="hero-section">
+            <h1>
+              Expert Payroll Support, Transparent Pricing & 24/7 Assistance —
+              Everything You Need to Run Stress-Free Payroll
+            </h1>
+          </section>
 
-        <h3> Get Free Consultation </h3>
-        <div className="button">
-          <Link to="/contact">
-            <button>
-              <FaEnvelope /> Contact Us
-            </button>
+          {/* === Top Message Section === */}
+          <div className="wrapper">
+            <h2 className="subtitle">
+              From dedicated specialists to crystal-clear pricing and
+              round-the-clock support — we handle payroll, so you can focus on
+              growth.
+            </h2>
+
+            {/* Feature Cards */}
+            <div className="features">
+              <div className="feature-card">
+                <div className="icon-circle">
+                  <Rocket color="#f04632" size={32} />
+                </div>
+                <h3>Dedicated Payroll Specialist</h3>
+                <p>
+                  Your highly trained, dedicated payroll specialist is the
+                  single point of contact for all your payroll and tax needs.
+                </p>
+                <a href="/about">ABOUT US &raquo;</a>
+              </div>
+
+              <div className="feature-card">
+                <div className="icon-circle">
+                  <Settings color="#f04632" size={32} />
+                </div>
+                <h3>Transparent Pricing</h3>
+                <p>
+                  The direct costs of payroll processing can be greatly reduced
+                  by working with an efficient payroll provider.
+                </p>
+                <a href="/payrolloutsourcing">
+                  PAYROLL OUTSOURCING IN INDIA &raquo;
+                </a>
+              </div>
+
+              <div className="feature-card">
+                <div className="icon-circle">
+                  <Mic color="#f04632" size={32} />
+                </div>
+                <h3>24/7 Support</h3>
+                <p>
+                  Need assistance after business hours? No problem. A team of
+                  specialists is ready to help you.
+                </p>
+                <a href="/contact">CONTACT US &raquo;</a>
+              </div>
+            </div>
+          </div>
+
+          {/* === Two Column Main Section === */}
+          <div className="HomeSubContainer">
+            <div className="VisionContactHeading">
+              <h1>
+                Smart Vision Meets Human Connection – We’re Here to Help You
+                Grow!
+              </h1>
+              <h2>
+                Whether it’s tech-enabled payroll solutions or one-on-one
+                support — Let’s start the conversation today.
+              </h2>
+            </div>
+
+            {/* Left Section */}
+            <div className="left-section">
+              <h2>My Vision Statement:</h2>
+              <p>
+                To become a leading provider of payroll and tax compliance
+                services, helping businesses stay focused on growth while we
+                handle the complexities of payroll, GST, and TDS with precision
+                and integrity.
+              </p>
+
+              <h2>Vision with Tech Focus:</h2>
+              <p>
+                To redefine payroll and tax services through smart technology
+                and expert support, ensuring every business, big or small,
+                stays compliant and stress-free.
+              </p>
+              <h2>Client-Centric & Innovation Focus:</h2>
+              <p>To empower businesses by delivering seamless, reliable, and tech-enabled payroll and compliance solutions, where innovation meets accuracy, and client success is our priority.</p>
+
+              <button className="info-button">Click here for more info</button>
+            </div>
+
+            {/* Right Section - Contact Form */}
+            <div className="right-section">
+              <h2>Interested in our Services?</h2>
+              <p>
+                Fill this form, one of our executives will contact you soon.
+              </p>
+
+              <form>
+                <div className="input-group">
+                  <input type="text" placeholder="Name" />
+                  <input type="email" placeholder="Email" />
+                </div>
+
+                <div className="input-group">
+                  <input type="text" placeholder="Location" />
+                  <input type="tel" placeholder="Mobile No" />
+                </div>
+
+                <textarea placeholder="Select Services"></textarea>
+
+                <p className="privacy-text">
+                  We respect your privacy. Don't worry, your details will not be
+                  shared with anyone.
+                </p>
+
+                <button type="submit" className="submit-button">
+                  Submit <span>&#x27A4;</span>
+                </button>
+              </form>
+            </div>
+          </div>
+
+          {/* === WhatsApp Future Button === */}
+          {/* 
+          <Link to="/contact" className="whatsapp-icon">
+            <img src="/whatsapp-icon.png" alt="WhatsApp" />
           </Link>
-          <button>
-            <FaWhatsapp /> WhatsApp Us
-          </button>
-        </div>
-
-        <p>Trusted by SMEs, startups, and growing businesses across India.</p>
-      </div>
-
-      <div className="SecondContainer">
-        <h2>Why Choose EzMyBiz for Payroll Outsourcing?</h2>
-        <h3>100% Accuracy, On-Time Every Time</h3>
-        <p>Say goodbye to payroll errors and delays.</p>
-
-        <h3>Full Statutory Compliance</h3>
-        <p>We handle PF, ESI, TDS, and labour laws — hassle-free.</p>
-
-        <h3>Cost-Effective & Scalable</h3>
-        <p>Flexible packages that fit every business size.</p>
-
-        <h3>Payslips & Reports Ready to Go</h3>
-        <p>Clear, timely payslips and MIS reports delivered every month.</p>
-
-        <h3>Dedicated Payroll Expert Support</h3>
-        <p>Talk to real people who understand your business needs.</p>
-      </div>
-
-      <div className="ThirdContainer">
-        <h2>How It Works – 3 Easy Steps</h2>
-        <h3>1.Share Employee Data</h3>
-        <p>Upload or email your employee and salary details securely.</p>
-
-        <h3>2.We Process Payroll & Handle Compliance</h3>
-        <p>We calculate salaries, deduct TDS, PF, ESI, and prepare reports.</p>
-
-        <h3>3.Payslips Delivered, Salary Disbursed</h3>
-        <p>You approve, we execute. Payslips go out, salaries get credited.</p>
-
-        <h4>🔁 Monthly payroll without stress!</h4>
-
-        <div className="button-container">
-          <button>Start Your Payroll Today</button>
+          */}
         </div>
       </div>
-    </div>
+    </>
   );
-}
+};
 
 export default Home;

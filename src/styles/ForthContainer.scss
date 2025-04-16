@@ -1,57 +1,62 @@
 .Forth {
-  text-align: center;
   width: 100%;
   padding: 50px 0;
-  background-color: #d6e1e5; /* Dark blue background */
-}
+  background-color: #102030;
+  &:hover {
+    // transform: scale(1.05);
+    transition: all;
+    box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
+  }
 
-.counter-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: 0 auto;
-  
-}
-
-h1 {
-  color: rgb(28, 27, 27);
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.counter-box {
-  text-align: center;
-  padding: 20px;
-  min-width: 200px;
-  
-
-  h2 {
-    font-size: 48px; /* Large font size for numbers */
+  // ✅ Only h1 center aligned
+  h1 {
+    text-align: center !important;
+    color: white;
+    font-size: 32px;
     font-weight: bold;
-    color: #76c3ed; /* Light blue color for numbers */
-    margin: 0;
+    margin-bottom: 40px;
+    width: 100%;
+    
   }
 
-  p {
-    font-size: 18px;
-    font-weight: 600;
-    color: rgb(16, 16, 16); /* White text for labels */
-    margin-top: 5px;
+  .counter-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
   }
-}
 
-/* 🔹 Counter animation effect */
-.counter {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
-}
+  .counter-box {
+    text-align: center;
+    padding: 20px;
+    min-width: 200px;
 
-/* ✅ When counter becomes visible */
-.counter.visible {
-  opacity: 1;
-  transform: translateY(0);
+    h2 {
+      font-size: 48px;
+      font-weight: bold;
+      color: rgb(219, 3, 154);
+      margin: 0;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 600;
+      color: rgb(186, 213, 224);
+      margin-top: 5px;
+    }
+  }
+
+  // 🔹 Counter animation effect
+  .counter {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  }
+
+  .counter.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

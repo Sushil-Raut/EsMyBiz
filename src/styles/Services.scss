@@ -1,0 +1,51 @@
+// /* Dropdown Menu Styling */
+// .dropdown {
+//   display: flex;
+//   align-items: center; /* Vertically center */
+//   justify-content: center; /* Horizontally center (if needed) */
+//   height: 100%; /* Ensure it takes full height */
+//   position: relative;
+// }
+
+// .dropbtn {
+//   font-size: 16px;
+//   font-weight: bold;
+//   cursor: pointer;
+//   display: flex;
+//   align-items: center; /* Fix vertical alignment */
+//   line-height: normal; /* Remove extra spacing */
+// }
+
+// /* Dropdown content styling */
+// .dropdown-content {
+//   display: none;
+//   position: absolute;
+//   top: 100%; /* Open dropdown below button */
+//   background-color: red;
+//   left: 0;
+//   background-color: white;
+//   min-width: 150px;
+//   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+//   z-index: 1000;
+// }
+
+// /* Show dropdown on hover */
+// .dropdown:hover .dropdown-content {
+//   display: block;
+// }
+
+
+
+// /* By default (mobile) - Hide */
+// .dropdown {
+//     display: none !important;
+//   }
+  
+//   /* Show only on Tablet (iPad, iPad Pro) and Laptops */
+//   @media screen and (min-width: 768px) {
+//     .dropdown {
+//       display: block !important;
+//     }
+//   }
+  
+  

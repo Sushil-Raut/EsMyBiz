@@ -1,117 +1,291 @@
-.MainContainer {
-    width: 100%;
+$primary-color: #4b0082;
+$secondary-color: #6a0dad;
+$gradient: linear-gradient(to right, #6a0dad, #00bcd4);
+$text-light: #ffffff;
+$light-bg: #f9f9f9;
+$dark-bg: #ffffff;
+$shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+$transition: all 0.3s ease;
+$heading-gradient: linear-gradient(to right, #1e90ff, #00bfa6);
+
+.VirtualContainer {
+  // margin-top: 0px;
+  width: 100%;
+  margin: 0px auto;
+  padding:  20px;
+  background-color: $light-bg;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0; // removes top, bottom, left margins
+    text-align: left;
+    align-self: flex-start;
+  }
+
+  h4 {
+    color: #171717;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 0;
+    align-self: flex-start;
+  }
+}
+
+.FirstContainer1,
+.SecondContainer2,
+.ThirdContainer3 {
+  // margin-top: 30px;
+  width: 100%;
+  background-color: white;
+  padding: 30px;
+  // border-radius: 10px;
+  // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
+  }
+}
+
+.FirstContainer1 {
+  text-align: left;
+
+  h2 {
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 16px;
+    color: #555;
+    text-align: left;
+    margin: 8px 0;
+    position: relative;
+    padding-left: 35px;
+
+    &::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 25px;
+      height: 25px;
+      background-color: green;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+  }
+
+  .ContactBtn {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+
+    button {
+      background-image: $gradient;
+      color: $text-light;
+      padding: 0.9rem 2rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(106, 13, 173, 0.3);
+      transition: $transition;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
+      }
+    }
+  }
+}
+
+.SecondContainer2 {
+  text-align: left;
+
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+}
+
+.ThirdContainer3 {
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+}
+
+// Card Styling
+.card {
+  width: 190px;
+  height: 254px;
+  background: #171717;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 3px 1px #00000088;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 10px;
+
+  .content {
+    border-radius: 10px;
+    background: #171717;
+    width: 186px;
+    height: 250px;
+    z-index: 1;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 30px;
-    padding: 40px 20px;
-    background-color: #f9f9f9;
+    position: relative;
+    text-align: center;
 
-    .FirstContainer, .SecondContainer, .ThirdContainer {
-        width: 95%;
-        background-color: white;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    p {
+      margin: 0;
+      font-size: 13px;
+      color: white;
+      text-align: center;
+      line-height: 1.4;
+      animation: fadeSlideUp 0.6s ease forwards;
+      opacity: 0;
+      transform: translateY(10px);
     }
 
-    .FirstContainer {
-        text-align: center;
-
-        h2 {
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        h3 {
-            font-size: 18px;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 16px;
-            color: #555;
-            text-align: left;
-            margin: 8px 0;
-            position: relative;
-            padding-left: 35px;
-        }
-
-        // Checkmark Circle for Each List Item
-        p::before {
-            content: "✔";
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 25px;
-            height: 25px;
-            background-color: green;
-            color: white;
-            font-size: 14px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-        }
-
-        .ContactBtn {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-
-            button {
-                background-color: #007bff;
-                color: white;
-                border: none;
-                padding: 12px 25px;
-                font-size: 16px;
-                cursor: pointer;
-                border-radius: 5px;
-                font-weight: bold;
-                transition: background 0.3s ease;
-
-                &:hover {
-                    background-color: #0056b3;
-                }
-            }
-        }
+    &::before {
+      opacity: 0;
+      transition: opacity 300ms;
+      content: " ";
+      display: block;
+      background: #fff5;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      filter: blur(50px);
     }
+  }
 
-    .SecondContainer {
-        text-align: left;
+  &:hover .content::before {
+    opacity: 1;
+  }
 
-        h2 {
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
+  &::before,
+  &::after {
+    opacity: 1;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 300px;
+    transition: opacity 300ms;
+  }
 
-        p {
-            font-size: 16px;
-            color: #555;
-            line-height: 1.5;
-            margin-bottom: 10px;
-        }
-    }
+  &::before {
+    transform: rotate(0deg) translateY(50%);
+    background: linear-gradient(90deg, #ff2288, transparent);
+    animation: rotation_9018 3000ms infinite linear;
+    animation-play-state: paused;
+  }
 
-    .ThirdContainer {
-        h2 {
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
+  &::after {
+    transform: rotate(0deg) translateY(-50%);
+    background: linear-gradient(90deg, transparent, #2268ff);
+    animation: rotation_9019 3000ms infinite linear;
+    animation-play-state: paused;
+  }
 
-        p {
-            font-size: 16px;
-            color: #555;
-            margin-bottom: 10px;
-            font-weight: 500;
-        }
-    }
+  &:hover::before,
+  &:hover::after {
+    animation-play-state: running;
+  }
+
+  &:hover .glass {
+    opacity: 0;
+  }
+}
+
+.glass {
+  position: absolute;
+  display: block;
+  width: 190px;
+  height: 254px;
+  background: #17171733;
+  backdrop-filter: blur(50px);
+  z-index: 1;
+  transition-duration: 0.5s;
+}
+
+@keyframes rotation_9018 {
+  0% {
+    transform: rotate(0deg) translateY(50%);
+  }
+  100% {
+    transform: rotate(360deg) translateY(50%);
+  }
+}
+
+@keyframes rotation_9019 {
+  0% {
+    transform: rotate(0deg) translateY(-50%);
+  }
+  100% {
+    transform: rotate(360deg) translateY(-50%);
+  }
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ServiceCardsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 30px;
 }

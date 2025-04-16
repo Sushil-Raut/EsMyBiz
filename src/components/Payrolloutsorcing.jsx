@@ -1,39 +1,133 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaEnvelope } from "react-icons/fa"; // Email icon
+import { FaWhatsapp, FaArrowRight } from "react-icons/fa"; // WhatsApp icon
 import "../styles/ForthContainer.scss";
 import ForthContainer from "./ForthContainer";
+import HowItWorks from "../AnimationJSX/HowItWorks";
+import '../styles/Payrolloutsorcing.scss';
 
 function Payrolloutsorcing() {
+  const payrollServices = [
+    "End-to-End Payroll Processing",
+    "Salary Structuring and Tax-Optimisation",
+    "Payslip Generation and Distribution",
+    "PF, ESI, and Professional Tax Compliance",
+    "TDS Deduction and Filing of Returns",
+    "Form 16 Generation",
+    "Monthly Payroll Reports",
+    "Bonus, Gratuity & Leave Encashment Calculations",
+    "Full & Final Settlement",
+    "Employee Reimbursement Tracking",
+  ];
+
   return (
     <>
-      <div className="MainContainer">
+      <div className="PayrollContainer">
         <div className="FirstContainer">
-          <h2>Payroll Outsourcing – Hassle-Free, Accurate & Compliant</h2>
+          <h1>Simplify Your Payroll with Confidence</h1>
+          <h3>
+            We take care of your payroll processing, compliance, and payslips —
+            so you can focus on growing your business.
+          </h3>
+
+          <h4> Get Free Consultation </h4>
+          <div className="button">
+            <Link to="/contact">
+              <button className="contact-btn">
+                <FaEnvelope /> Contact Us
+              </button>
+            </Link>
+            <button className="whatsapp-btn">
+              <FaWhatsapp /> WhatsApp Us
+            </button>
+          </div>
+
+          <h5>
+            Trusted by SMEs, startups, and growing businesses across India.
+          </h5>
+        </div>
+
+        <div className="SecondContainer">
+          <h1>Why Choose EzMyBiz for Payroll Outsourcing?</h1>
+          <h3>100% Accuracy, On-Time Every Time</h3>
+          <p>
+            Say goodbye to payroll errors and delays. Our expert team ensures
+            precise and timely salary processing every cycle. From tax
+            calculations to compliance, we handle it all with zero mistakes.
+            Focus on your business while we guarantee error-free, on-time
+            payroll—every time.
+          </p>
+
+          <h3>Full Statutory Compliance</h3>
+          <p>
+            We take care of PF, ESI, TDS, and labour laws, ensuring your
+            business stays fully compliant. Our expert team handles all filings,
+            updates, and legal requirements—saving you time, avoiding penalties,
+            and keeping everything hassle-free.
+          </p>
+
+          <h3>Cost-Effective & Scalable</h3>
+          <p>
+            Get flexible payroll solutions tailored to your business size and
+            needs. Our affordable packages grow with you, offering maximum value
+            without compromising quality.
+          </p>
+
+          <h3>Payslips & Reports Ready to Go</h3>
+          <p>
+            Get clear, accurate payslips and monthly MIS reports delivered on
+            time. Stay informed and organized with all payroll details at your
+            fingertips.
+          </p>
+
+          <h3>Dedicated Payroll Expert Support</h3>
+          <p>
+            Get direct access to experienced payroll professionals who
+            understand your business. We offer personalized support to ensure
+            smooth, accurate, and hassle-free payroll management.
+          </p>
+        </div>
+
+        <div className="ThirdContainer">
+          <HowItWorks />
+
+          <h4>🔁 Monthly payroll without stress!</h4>
+
+          <div className="button-container">
+            <button>Start Your Payroll Today</button>
+          </div>
+        </div>
+        <div className="ForthContainer">
+          <h1>Payroll Outsourcing – Hassle-Free, Accurate & Compliant</h1>
           <h3>
             Let our payroll experts handle your employee salaries, compliance,
             and reporting – so you stay focused on growing your business without
             worrying about deductions, deadlines, or disputes.
           </h3>
 
-          <p> End-to-End Payroll Processing</p>
-          <p> Salary Structuring and Tax-Optimisation</p>
-          <p> Payslip Generation and Distribution</p>
-          <p> PF, ESI, and Professional Tax Compliance</p>
-          <p> TDS Deduction and Filing of Returns</p>
-          <p> Form 16 Generation</p>
-          <p> Monthly Payroll Reports</p>
-          <p> Bonus, Gratuity & Leave Encashment Calculations</p>
-          <p> Full & Final Settlement</p>
-          <p> Employee Reimbursement Tracking</p>
-          <div className="FirstContainerBtn">
+          <div className="payroll-cards-container">
+            {payrollServices.map((service, index) => (
+              <div key={index} className="payroll-card">
+                <div className="card-content">
+                  <h4>{service}</h4>
+                </div>
+                <div className="card-icon">
+                  <FaArrowRight />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="ForthContainerBtn">
             <Link to="/contact">
-              <button> 📞Shedule a free Consultation</button>
+              <button>📞 Schedule a Free Consultation</button>
             </Link>
           </div>
         </div>
 
-        <div className="SecondContainer">
-          <h2>Why Payroll Outsourcing is a Smart Move for Your Business</h2>
+        <div className="FifthContainer">
+          <h1>Why Payroll Outsourcing is a Smart Move for Your Business</h1>
           <p>
             Managing payroll in-house can be time-consuming, prone to errors,
             and exposes businesses to compliance risks. With changing tax laws,
@@ -60,8 +154,8 @@ function Payrolloutsorcing() {
             your payroll with precision and professionalism.
           </p>
         </div>
-        <div className="ThirdContainer">
-          <h2>Why Choose Our Payroll Outsourcing Services?</h2>
+        <div className="SixthContainer">
+          <h1>Why Choose Our Payroll Outsourcing Services?</h1>
 
           <p>
             <strong> Expertise You Can Trust:</strong> With years of payroll
@@ -91,8 +185,7 @@ function Payrolloutsorcing() {
             clock.
           </p>
         </div>
-          <ForthContainer/>
-        
+        <ForthContainer />
       </div>
     </>
   );

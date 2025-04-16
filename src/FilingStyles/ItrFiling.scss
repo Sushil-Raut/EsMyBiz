@@ -1,0 +1,145 @@
+
+$primary-color: #4b0082;
+$secondary-color: #6a0dad;
+$gradient: linear-gradient(to right, #6a0dad, #00bcd4);
+$text-light: #ffffff;
+$light-bg: #f9f9f9;
+$dark-bg: #ffffff;
+$shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+$transition: all 0.3s ease;
+$heading-gradient: linear-gradient(to right, #1e90ff, #00bfa6);
+
+.ItrFilingContent {
+  margin-top: 20px;
+    padding: 3rem 1rem;    
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', sans-serif;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    
+  
+    h1, h2, h3 {
+      color: #0d1b3f;
+      font-family: 'Segoe UI', sans-serif;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+  
+    h1 {
+      font-size: 2.2rem;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+    }
+  
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+  
+    p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+  
+    strong {
+      color: #333;
+      font-weight: 600;
+    }
+  
+    .FirstItr,
+    .SecondItr,
+    .ThirdItr,
+    .OurClint {
+      margin-top: 0px;
+        background-color: $dark-bg;
+        // border-radius: 15px;
+        // box-shadow: $shadow;
+        padding: 2.5rem;
+        margin-bottom: 3rem;
+        margin-right: 15px;
+        transition: $transition;
+        &:hover {
+          // transform: scale(1.05);
+          transition: all;
+          box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
+        }
+    }
+  
+    .OurClint p {
+      font-style: italic;
+    }
+  
+    .dontlate {
+      width: 100%;
+      text-align: center;
+      background: #0d1b3f;
+      background-color: rgb(150, 142, 129);
+      color: white;
+      padding: 3rem 2rem;
+      border-radius: 10px;
+  
+      h1 {
+        font-size: 2rem;
+        color: $primary-color;
+        margin-bottom: 1rem;
+      }
+  
+      h3 {
+        color: $primary-color;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        text-align: left;
+      }
+  
+      button {
+        background-image: $gradient;
+        color: $text-light;
+        padding: 0.9rem 2rem;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(106, 13, 173, 0.3);
+        transition: $transition;
+  
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      padding: 1rem;
+  
+      h1 {
+        font-size: 1.6rem;
+      }
+  
+      h2 {
+        font-size: 1.4rem;
+      }
+  
+      h3 {
+        font-size: 1.1rem;
+      }
+  
+      .dontlate h1 {
+        font-size: 1.6rem;
+      }
+  
+      .dontlate h3 {
+        font-size: 1rem;
+      }
+  
+      .dontlate button {
+        width: 100%;
+      }
+    }
+  }
+  

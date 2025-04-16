@@ -1,140 +1,188 @@
-.MainContainer {
+// Variables
+$primary-color: #4b0082;
+$secondary-color: #6a0dad;
+$gradient: linear-gradient(to right, #6a0dad, #00bcd4);
+$text-light: #ffffff;
+$light-bg: #f9f9f9;
+$dark-bg: #ffffff;
+$shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+$transition: all 0.3s ease;
+$heading-gradient: linear-gradient(to right, #1e90ff, #00bfa6);
+// Reusable Info Card Style
+.InfoCard {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  font-size: 1.05rem;
+  color: #374151;
+  font-weight: 500;
+  max-width: 340px;
+  display: inline-block;
+  vertical-align: top;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
+
+   &:hover {
+          transform: translateY(-5px);
+        }
+}
+
+
+// Main Container
+.GstContainer {
+ width: 100%;
+  // max-width: 1373px;
+  margin: 20px auto; // Center the container horizontally
+  padding: 0 20px; // Consistent left and right padding
+  background-color: $dark-bg;
+  font-family: 'Segoe UI', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+
+ 
+  h3 { 
+    text-align: left;
+    // font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    
+
+    b,
+    strong {
+      color: $secondary-color;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .Mybtn,
+  .MycontactBtn {
+    margin-top: 2rem;
+    text-align: center;
+
+    button {
+      background-image: $gradient;
+      color: $text-light;
+      padding: 0.9rem 2rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(106, 13, 173, 0.3);
+      transition: $transition;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
+      }
+    }
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;    
+    margin: 2rem 0;
+    
+  } 
+  
+  
+
+  // First, Second, and Third Containers (Same Layout)
+  .FirstCon,
+  .SecondContainer,
+  .ThirdContainer {
+    margin-top: 10px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    padding: 40px 20px;
-
-    .FirstContainer, .SecondContainer, .ThirdContainer {
-        width: 95%;
-        background-color: white;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: $dark-bg;
+    
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    margin-right: 15px;
+    &:hover {
+      // transform: scale(1.05);
+      transition: all;
+      box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
     }
 
-    // First Section (Service Introduction)
-    .FirstContainer {
-        text-align: center;
-
-        h2 {
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        h3 {
-            font-size: 18px;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        p {
-            position: relative;
-            padding-left: 40px; // Space for the check icon
-            font-size: 16px;
-            color: #555;
-            display: flex;
-            align-items: center;
-        }
-
-        p::before {
-            content: "✔";
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 25px;
-            height: 25px;
-            background-color: green;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-        }
-
-        .Mybtn {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-
-            button {
-                background-color: #4f86f7;
-                color: white;
-                border: none;
-                padding: 12px 25px;
-                font-size: 16px;
-                cursor: pointer;
-                border-radius: 5px;
-                font-weight: bold;
-                transition: background 0.3s ease;
-
-                &:hover {
-                    background-color: #3a6fd8;
-                }
-            }
-        }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #333;
+      // color: $primary-color;
+      text-shadow: 1px 1px 0px #ddd;
+  
+      text-align: left;
+      align-self: flex-start; // 👈 Important
+      width: 100%; // 👈 Ensures full width for alignment
+    }
+  
+    &:hover {
+      // transform: scale(1.05);
+      transition: all;
+      box-shadow: 0 6px 20px rgba(0, 188, 212, 0.4);
     }
 
-    // Second Section (Why Choose Us)
-    .SecondContainer {
-        text-align: left;
 
-        h2 {
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
+    .CardsWrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
 
-        p {
-            font-size: 16px;
-            color: #555;
-            line-height: 1.5;
-            margin-bottom: 10px;
-        }
+      p {
+        @extend .InfoCard;
+      }
+    }
+  }
+
+  .FirstCon{
+    margin-top: 20px;
+  }
+
+  // Responsive Styles
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.5rem;
     }
 
-    // Third Section (Trusted Partner)
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .FirstCon,
+    .SecondContainer,
     .ThirdContainer {
-        h2 {
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        p {
-            font-size: 16px;
-            color: #555;
-            margin-bottom: 10px;
-            font-weight: 500;
-        }
-
-        .MycontactBtn {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-
-            button {
-                background-color: #28a745;
-                color: white;
-                border: none;
-                padding: 12px 25px;
-                font-size: 16px;
-                cursor: pointer;
-                border-radius: 5px;
-                font-weight: bold;
-                transition: background 0.3s ease;
-
-                &:hover {
-                    background-color: #218838;
-                }
-            }
-        }
+      padding: 1.5rem;
     }
+
+    .Mybtn button,
+    .MycontactBtn button {
+      width: 100%;
+      font-size: 1rem;
+    }
+  }
 }

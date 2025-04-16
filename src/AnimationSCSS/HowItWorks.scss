@@ -1,0 +1,120 @@
+.how-it-works-container {
+  text-align: center;
+  padding: 50px 20px;
+
+  h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+
+    small {
+      font-size: 18px;
+      color: #777;
+    }
+  }
+
+  .how-it-works-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap; // ensures wrapping on medium/small screens
+
+    .how-it-works-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 300px;
+      position: relative;
+
+      .icon {
+        font-size: 40px;
+        color: #2ab4c2;
+        margin-bottom: 15px;
+      }
+
+      h3 {
+        text-align: left;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        text-align: left;
+        font-size: 16px;
+        color: #555;
+      }
+
+      .number {
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        background: #04d9fe;
+        color: white;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 50%;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+/* 💻 Laptop (1024px - 1200px) */
+@media (max-width: 1200px) {
+  .how-it-works-container {
+    .how-it-works-cards {
+      gap: 20px;
+
+      .how-it-works-card {
+        width: 280px;
+        padding: 18px;
+      }
+    }
+  }
+}
+
+/* 📱 Tablet/iPad (768px - 1023px) */
+@media (max-width: 1023px) {
+  .how-it-works-container {
+    h2 {
+      font-size: 26px;
+    }
+
+    .how-it-works-cards {
+      justify-content: center;
+      gap: 20px;
+
+      .how-it-works-card {
+        width: 45%; // Two cards per row
+      }
+    }
+  }
+}
+
+/* 📱 Mobile (Below 768px) */
+@media (max-width: 767px) {
+  .how-it-works-container {
+    padding: 40px 15px;
+
+    h2 {
+      font-size: 24px;
+
+      small {
+        font-size: 16px;
+      }
+    }
+
+    .how-it-works-cards {
+      flex-direction: column;
+      align-items: center;
+
+      .how-it-works-card {
+        width: 90%; // Full width
+      }
+    }
+  }
+}

@@ -1,59 +1,124 @@
 .MiniNavContainer {
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    
-    &.active {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%; // Full screen width
+  opacity: 0;
+  height: 100vh;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 999;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.MiniNav {
+  display: flex;
+  flex-direction: column;
+  background-color: #2b2b40;
+  padding: 20px;
+  border-radius: 0;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+
+  // Close Button Fix
+  .close-btn {
+    position: calc(90);
+    top: 0px;    // Set top margin to 0
+    right: 10px; // Align button to right corner
+    background: none;
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    color: red;  // Change color to red
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 1000;
+
+    &:hover {
+      color: white; // Change to white on hover
     }
   }
-  
-  .MiniNav {
+
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: #3b3b58;
+      color: #76c3ed;
+    }
+  }
+
+  button {
+    background-color: #2ab4c2;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background-color: #1e909e;
+    }
+  }
+}
+
+// Dropdown Styles
+.mini-dropdown {
+  display: flex;
+  flex-direction: column;
+
+  .mini-dropbtn {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 0;
+    cursor: pointer;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+
+    &.active {
+      background-color: white;
+      color: black;
+    }
+  }
+
+  .mini-dropdown-content {
     display: flex;
     flex-direction: column;
-    background-color: #2b2b40;  // Darker background for better contrast
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-    width: 220px;
-    text-align: center;
-  
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
     a {
-      text-decoration: none;
-      color: #ffffff;
-      padding: 12px;
-      font-size: 16px;
-      font-weight: 500;
-      transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-      border-radius: 5px;
-  
-      &:hover {
-        background-color: #3b3b58;
-        color: #76c3ed;
-      }
-    }
-  
-    button {
-      background-color: #2ab4c2;
-      border: none;
-      padding: 12px;
-      font-size: 16px;
-      font-weight: bold;
+      padding: 8px;
+      font-size: 15px;
       color: black;
-      cursor: pointer;
-      margin-top: 10px;
-      border-radius: 5px;
-      transition: background 0.3s ease-in-out;
-  
+      text-decoration: none;
+      transition: 0.3s;
+
       &:hover {
-        background-color: #1e909e;
+        background-color: #652525;
+        color: crimson;
       }
     }
   }
-  
+}
